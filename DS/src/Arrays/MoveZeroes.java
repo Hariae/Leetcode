@@ -21,25 +21,7 @@ public class MoveZeroes {
 		
 		int counter = 0;
 		//System.out.println("Inside");
-		boolean flag = false;
-		/*for(int i=0;i<arr.length;) {
-			System.out.println("i" + i);
-			if(i < arr.length-counter) {
-				if(arr[i] == 0) {
-					counter++;			
-					System.out.println("Counter" + counter);
-					arr = shiftArray(arr, i);
-					flag = true;
-				}
-				
-			}
-			if(flag)
-				i=0;
-			else
-				i++;
-			
-		}	*/
-		
+		boolean flag = false;		
 		int i = 0;
 		while(i< arr.length) {
 			if(i < arr.length-counter && counter <= arr.length) {
