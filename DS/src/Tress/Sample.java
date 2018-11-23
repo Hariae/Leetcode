@@ -104,6 +104,40 @@ public class Sample {
 			}
 		}
 	}
+	public void printCurrentLevel(Node root, int level) {
+		if(root == null)
+			return;
+		if(level == 1) {
+			System.out.print(root.data + " ");
+		}
+		else if (level > 1){
+			printCurrentLevel(root.left, level-1);
+			printCurrentLevel(root.right, level-1);
+		}
+	}
+	public void printLevelOrder(Node root) {
+		int h = height(root);
+		
+		for(int i=1;i<=h;i++) {
+			printCurrentLevel(root, i);
+		}
+	}
+	
+	public int height(Node root) {
+		if(root == null) return 0;
+		else {
+			int lheight = height(root.left);
+			int rheight = height(root.right);
+			
+			if(lheight > rheight) {
+				return (lheight+1);
+			}
+			else {
+				return (rheight+1);
+			}
+			
+		}
+	}
 
 
 	public static void main(String[] args) {
@@ -140,6 +174,7 @@ public class Sample {
 		root = obj.deleteNode(root, 2);
 		obj.inorder(root);
 		System.out.println("Depth: "+obj.maxDepth(root));
+		obj.printLevelOrder(root);
 	}
 
 }
