@@ -1,5 +1,7 @@
 package leetcodeProblems;
 
+import java.util.List;
+
 public class Remove_Duplicates_From_Sorted_Array_26 {
 	
 	public int removeDuplicates(int[] nums) {
