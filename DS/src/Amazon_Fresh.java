@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Amazon_Air_Routes {
+public class Amazon_Fresh {
 	
 	public class Point{
 		int x;
@@ -82,7 +82,7 @@ public class Amazon_Air_Routes {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Amazon_Air_Routes obj = new Amazon_Air_Routes();
+		Amazon_Fresh obj = new Amazon_Fresh();
 		
 		List<Point> list = new ArrayList<Point>();
 		
