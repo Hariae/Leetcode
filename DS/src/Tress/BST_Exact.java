@@ -14,12 +14,25 @@ public class BST_Exact {
 		}
 	}
 	public List<Integer> res = new ArrayList<Integer>();
+	public int i=0;
 	
 	public void inorder(TreeNode root) {
 		if(root != null) {
 			inorder(root.left);
 			res.add(root.data);
 			inorder(root.right);
+		}
+	}
+	
+	public void re_inorder(TreeNode root) {
+		if(root != null) {
+			re_inorder(root.left);
+			if(res.get(i) == root.data) {
+				res.remove(i);
+				res.add(i, -1);
+				i++;
+			}
+			re_inorder(root.right);
 		}
 	}
 	
@@ -30,7 +43,11 @@ public class BST_Exact {
 		for(int i=0;i<res.size();i++) {
 			System.out.println(res.get(i));
 		}
-		
+		//root.right.right = new TreeNode(21);
+		re_inorder(root);
+		for(int i=0;i<res.size();i++) {
+			System.out.println(res.get(i));
+		}
 		return true;
 	}
 
